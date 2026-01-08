@@ -1,0 +1,97 @@
+{
+  "version": "2026.01.07",
+  "entries": [
+    {
+      "id": "2026-01-07-pseudonimizacao-3-modos",
+      "version": "2026.01.07",
+      "date": "2026-01-07",
+      "type": "feature",
+      "title": "3 Modos de Pseudonimização",
+      "description": "Escolha entre mascaramento, tags semânticas ou dados sintéticos para proteger PIIs.",
+      "icon": "Shield",
+      "details": [
+        "Mascaramento: Asteriscos irreversíveis (Jo** ***va)",
+        "Tags Semânticas: Placeholders reversíveis ([PESSOA_1]) - Recomendado para IA",
+        "Dados Sintéticos: Nomes fake realistas (Carlos Santos)"
+      ],
+      "screens": ["PII → Upload"]
+    },
+    {
+      "id": "2026-01-07-rehidratacao-melhorada",
+      "version": "2026.01.07",
+      "date": "2026-01-07",
+      "type": "improvement",
+      "title": "Re-hidratação Aprimorada",
+      "description": "Restauração de dados originais agora funciona mesmo quando LLM remove colchetes das tags.",
+      "icon": "Droplets",
+      "details": [
+        "Aceita tags com ou sem colchetes",
+        "Ordenação por tamanho para evitar substituições parciais",
+        "Regex com word boundaries para precisão"
+      ],
+      "screens": ["PII → Análise → Re-hidratar"]
+    },
+    {
+      "id": "2026-01-07-allowlist-falsos-positivos",
+      "version": "2026.01.07",
+      "date": "2026-01-07",
+      "type": "fix",
+      "title": "Redução de Falsos Positivos",
+      "description": "Palavras comuns como 'Olá', 'Sim', 'Quantas' não são mais detectadas como nomes.",
+      "icon": "CheckCircle",
+      "details": [
+        "AllowList de palavras comuns em português",
+        "Saudações, respostas e pronomes ignorados",
+        "Dias da semana e meses não confundidos com nomes"
+      ],
+      "screens": ["PII → Upload"]
+    },
+    {
+      "id": "2026-01-06-progress-tracking",
+      "version": "2026.01.06",
+      "date": "2026-01-06",
+      "type": "feature",
+      "title": "Monitoramento de Progresso em Tempo Real",
+      "description": "Acompanhe o progresso das análises de PII com barra de progresso e estimativas.",
+      "icon": "BarChart3",
+      "details": [
+        "Barra de progresso com percentual",
+        "Contagem de chunks completados/pendentes",
+        "Estimativa de tempo restante",
+        "Detecção automática de rate limits"
+      ],
+      "screens": ["PII → Análise"]
+    },
+    {
+      "id": "2026-01-06-retomar-analise",
+      "version": "2026.01.06",
+      "date": "2026-01-06",
+      "type": "feature",
+      "title": "Retomar Análises Pausadas",
+      "description": "Análises interrompidas por rate limit podem ser retomadas sem perder progresso.",
+      "icon": "PlayCircle",
+      "details": [
+        "Preserva chunks já processados",
+        "Permite trocar modelo ao retomar",
+        "Sugestões automáticas de recuperação"
+      ],
+      "screens": ["PII → Análise → Retomar"]
+    },
+    {
+      "id": "2026-01-05-prompts-profissionais",
+      "version": "2026.01.05",
+      "date": "2026-01-05",
+      "type": "improvement",
+      "title": "Prompts de Análise Profissionais",
+      "description": "Prompts reformulados com personas especializadas e estruturas de resposta detalhadas.",
+      "icon": "Brain",
+      "details": [
+        "Psicólogo organizacional para análise de sentimento",
+        "Gerente PMI para itens de ação",
+        "Curador de conteúdo para extração de tópicos",
+        "Taxonomias e escalas padronizadas"
+      ],
+      "screens": ["PII → Análise"]
+    }
+  ]
+}
